@@ -1,14 +1,18 @@
 .header {
-  padding: 18px 70px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  padding: 0;
+  position: relative;
   display: flex;
+  background: #202020;
+  width: 100vw;
+  height: 74px;
+  margin: 0 auto;
 }
 .header__logo {
   width: 38px;
   height: 38px;
+  position: absolute;
+  top: 18px;
+  left: 70px;
 }
 .header__menu {
   margin: 0;
@@ -18,18 +22,28 @@
   display: flex;
   list-style-type: none;
   align-items: center;
+  position: absolute;
+  right: 70px;
+  top: 21px;
 }
 .header__menu-point {
   padding: 0;
-  margin: 5px;
+  margin: 0;
 }
 .header__menu-btn {
   background: rgba(32, 32, 32, 1);
   border: none;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 .header__menu-btn {
   transition: 0.5s ease all;
   color: white;
+}
+.header__menu-btn-home-page {
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .header__menu-signin-btn {
@@ -38,10 +52,18 @@
   height: 32px;
   width: 76px;
   color: black;
+  margin-left: 30px;
 }
 .header__menu-profile-btn {
   display: flex;
   align-items: center;
+  margin-left: 50px;
+  line-height: 16px;
+}
+.header__menu-save-movies-btn {
+  margin-left: 20px;
+  font-weight: 400;
+  line-height: 18px;
 }
 .header__menu-btn:hover {
   cursor: pointer;
