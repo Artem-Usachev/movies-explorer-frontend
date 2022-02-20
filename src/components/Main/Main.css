@@ -1,190 +1,166 @@
-.information-sheet {
-  background: #272727;
-  width: calc(100% - 80px);
-  margin: 0 auto;
-  height: 493px;
-  color: #ffff;
-  margin-top: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.information-sheet__title {
-  margin: 160px auto 0;
-  width: 730px;
-  font-size: 50px;
-  line-height: 58px;
-  font-weight: normal;
-  text-align: center;
-}
-.information-sheet-link-bar {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 151px auto 30px;
-}
-
-.information-sheet-link {
-  margin: 0 5px;
-  display: flex;
-  text-decoration: none;
-  color: #ffff;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  padding: 0;
-  width: 96px;
-  height: 36px;
-  background: #303030;
-  transition: 1s ease all;
-}
-.information-sheet-link:hover {
-  opacity: 0.7;
-}
 /* content */
 .content {
   padding: 0 70px;
 }
 /* project */
 
-.project {
-  margin: 0;
-  padding-top: 110px;
-  padding-bottom: 110px;
-}
-.project__title {
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 27px;
-  margin: 0 0 23px;
-}
-.project__text-box {
-  border-top: 1px solid #dadada;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 70px;
-}
-.project__text-box-point {
-  display: flex;
-  flex-direction: column;
-  width: 550px;
-}
-.project__text-box-point:last-child {
-  margin-left: 40px;
-}
-.project__subtitle {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
-}
-.project__text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-}
-.project__timelapse {
-  margin-top: 110px;
-  display: flex;
-}
-.project__timelapse-table {
-}
-.project__timelapse-text-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.project__timelapse-text-box-left {
-  background: #3ddc84;
-  color: #000000;
-  width: 228px;
-  height: 36px;
-}
-.project__timelapse-text-box-right {
-  background: #303030;
-  width: 912px;
-  height: 36px;
-}
-.project__timelaps-text-en {
-  color: #8b8b8b;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  margin: 14px 0 0;
-}
-/* technology */
-.technology {
-  padding-top: 100px;
-  background: #272727;
-}
-.technology__title {
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 27px;
-  margin: 0 0 23px;
-}
-.technology__content {
-  border-top: 1px solid #dadada;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 90px;
-}
-.technology__subtitle {
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 58px;
-  margin: 90px 0 26px;
-}
-.technology__text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  width: 460px;
-  text-align: center;
-  margin: 0;
-}
-.technology__link-bar {
-  display: flex;
-  list-style: none;
-  margin: 100px 0;
-}
-.technology__link-bar-point {
-  margin-left: 10px;
-}
-.technology__link-bar-point:first-child {
-  margin-left: 0;
-}
-.technology__link {
-  text-decoration: none;
-  color: #ffffff;
-  width: 90px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background: #303030;
-  transition: 1s ease all;
-}
-.technology__link:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
-.technology__link-text {
-  margin: 0;
-}
 /* student */
 .student {
   background: #202020;
-  padding-top: 110px;
+  padding: 110px 70px 0;
 }
 .student__title {
   font-weight: normal;
   font-size: 22px;
   line-height: 27px;
   margin: 0 0 23px;
+}
+.student__content {
+  border-top: 1px solid #dadada;
+  padding-top: 66px;
+  margin: 0 0 100px;
+}
+.student__info {
+  display: flex;
+}
+.student__img {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+}
+.student__text-box {
+  width: 600px;
+  margin: 0 270px 0 0;
+}
+.student__subtitle {
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+  margin: 0;
+}
+.student__semi-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 18px 0 26px;
+}
+.student__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0 0 99px;
+}
+.student__link-bar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.student__link-bar-point {
+  margin: 0 10px;
+  transition: 1s ease all;
+}
+.student__link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.student__link-bar-point:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.student__link-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.portfolio {
+  padding: 0 70px;
+}
+.portfolio__title {
+  font-weight: normal;
+  font-size: 18px;
+  color: #8b8b8b;
+  line-height: 20px;
+  margin: 0 0 30px;
+}
+.portfolio__link-bar {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 125px;
+}
+.portfolio__link-bar-point {
+  padding-bottom: 19px;
+  padding-top: 20px;
+  border-bottom: 1px solid #424242;
+  transition: 1s ease all;
+}
+.portfolio__link-bar-point:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.portfolio__link-bar-point:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.portfolio__link {
+  text-decoration: none;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-between;
+}
+.portfolio__link-img {
+  width: 17px;
+  height: 17px;
+}
+.portfolio__link-text {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 50px;
+  margin: 0;
+}
+/* footer */
+.footer {
+  margin: 0;
+  padding: 79px 70px 20px;
+}
+.footer__title {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #8b8b8b;
+  margin: 0 0 20px;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #424242;
+  padding-top: 20px;
+}
+.footer__link-bar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__copyright {
+  margin: 0;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+.footer__link-text {
+  margin: 0;
+}
+.footer__link-bar-piont {
+  margin-left: 10px;
+  transition: 1s ease all;
+}
+.footer__link-bar-piont:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.footer__link {
+  text-decoration: none;
+  color: #ffffff;
 }
