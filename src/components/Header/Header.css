@@ -1,18 +1,14 @@
 .header {
-  padding: 0;
-  position: relative;
+  padding: 18px 70px 0;
   display: flex;
   background: #202020;
-  width: 100vw;
   height: 74px;
   margin: 0 auto;
+  justify-content: space-between;
 }
 .header__logo {
   width: 38px;
   height: 38px;
-  position: absolute;
-  top: 18px;
-  left: 70px;
 }
 .header__menu {
   margin: 0;
@@ -22,9 +18,6 @@
   display: flex;
   list-style-type: none;
   align-items: center;
-  position: absolute;
-  right: 70px;
-  top: 21px;
 }
 .header__menu-point {
   padding: 0;

@@ -4,7 +4,7 @@ import logoLink from '../../images/logo.svg';
 const Header = ({ homePageBtnCondition, applicationBtnCondition }) => {
   return (
     <>
-      <div className='header'>
+      <header className='header'>
         <img className='header__logo' alt='лого' src={logoLink} />
         <nav className='header__menu'>
           <ul className='header__menu-bar'>
@@ -36,7 +36,7 @@ const Header = ({ homePageBtnCondition, applicationBtnCondition }) => {
             </li>
           </ul>
         </nav>
-      </div>
+      </header>
     </>
   );
 };
