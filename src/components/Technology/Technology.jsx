@@ -12,17 +12,32 @@ const Technology = () => {
         </p>
         <ul className="technology__link-bar">
           <li className="technology__link-bar-point">
-            <a className="technology__link" href="https://doka.guide/html/">
+            <a
+              className="technology__link"
+              href="https://doka.guide/html/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <p className="technology__link-text"> HTML</p>
             </a>
           </li>
           <li className="technology__link-bar-point">
-            <a className="technology__link" href="https://doka.guide/css/">
+            <a
+              className="technology__link"
+              href="https://doka.guide/css/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <p className="technology__link-text"> CSS</p>
             </a>
           </li>
           <li className="technology__link-bar-point">
-            <a className="technology__link" href="https://doka.guide/js/">
+            <a
+              className="technology__link"
+              href="https://doka.guide/js/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <p className="technology__link-text"> JS</p>
             </a>
           </li>
@@ -30,22 +45,39 @@ const Technology = () => {
             <a
               className="technology__link"
               href="https://reactjs.org/docs/getting-started.html"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <p className="technology__link-text"> React</p>
             </a>
           </li>
           <li className="technology__link-bar-point">
-            <a className="technology__link" href="https://git-scm.com/doc">
+            <a
+              className="technology__link"
+              href="https://git-scm.com/doc"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <p className="technology__link-text"> Git</p>
             </a>
           </li>
           <li className="technology__link-bar-point">
-            <a className="technology__link" href="https://expressjs.com/">
+            <a
+              className="technology__link"
+              href="https://expressjs.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <p className="technology__link-text"> Express.js</p>
             </a>
           </li>
           <li className="technology__link-bar-point">
-            <a className="technology__link" href="https://docs.mongodb.com/">
+            <a
+              className="technology__link"
+              href="https://docs.mongodb.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <p className="technology__link-text"> mongoDB</p>
             </a>
           </li>

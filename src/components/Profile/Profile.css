@@ -75,6 +75,7 @@
 
 .profile__button_type_exit {
   color: #ee3465;
+  text-decoration: none;
 }
 
 .profile__button:hover {
@@ -97,4 +98,7 @@
 .profile__input:focus {
   border: none;
   outline: none;
+}
+.profile__button_type_exit-text {
+  margin: 0;
 }

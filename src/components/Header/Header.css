@@ -9,6 +9,7 @@
 .header__logo {
   width: 38px;
   height: 38px;
+  background-image: url(../../images/logo.svg);
 }
 .header__menu {
   margin: 0;
@@ -29,6 +30,7 @@
   padding: 0;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
 }
 .header__menu-btn {
   transition: 0.5s ease all;
@@ -40,11 +42,18 @@
 }
 
 .header__menu-signin-btn {
+  color: black;
+  position: absolute;
+  background: none;
+  top: 8px;
+  right: 20px;
+}
+.header__menu-point-signin {
   background: rgba(61, 220, 132, 1);
   border-radius: 3px;
+  position: relative;
   height: 32px;
   width: 76px;
-  color: black;
   margin-left: 30px;
 }
 .header__menu-profile-btn {

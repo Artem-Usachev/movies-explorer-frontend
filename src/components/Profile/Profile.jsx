@@ -1,40 +1,42 @@
-import React, { useState } from 'react';
-import Header from '../Header/Header';
+import React from "react";
+import Header from "../Header/Header";
 const Profile = () => {
-  const [inputName, setInputName] = useState('Артем');
   return (
     <>
-      <Header homePageBtnCondition={'disable'} />
-      <section className='profile'>
-        <h1 className='profile__title'>Привет, Виталий</h1>
-        <form className='profile__form'>
-          <ul className='profile__input-bar'>
-            <li className='profile__input-bar-point'>
-              <p className='profile__hint'>Имя</p>
+      <Header homePageBtnCondition={"disable"} />
+      <section className="profile">
+        <h1 className="profile__title">Привет, Виталий</h1>
+        <form className="profile__form">
+          <ul className="profile__input-bar">
+            <li className="profile__input-bar-point">
+              <p className="profile__hint">Имя</p>
               <input
-                className='profile__input'
-                placeholder='Ваше имя'
-                defaultValue={'Виталий'}
+                className="profile__input"
+                placeholder="Ваше имя"
+                defaultValue={"Виталий"}
               ></input>
             </li>
-            <li className='profile__input-bar-point'>
-              <p className='profile__hint'>E-mail</p>
+            <li className="profile__input-bar-point">
+              <p className="profile__hint">E-mail</p>
               <input
-                className='profile__input'
-                defaultValue={'pochta@yandex.ru'}
+                className="profile__input"
+                defaultValue={"pochta@yandex.ru"}
               ></input>
             </li>
           </ul>
-          <div className='profile__btn-box'>
-            <button type='submit' className='profile__button'>
+          <div className="profile__btn-box">
+            <button type="submit" className="profile__button">
               Редактировать
             </button>
-            <button
-              type='button'
-              className='profile__button profile__button_type_exit'
+            <a
+              type="button"
+              className="profile__button profile__button_type_exit"
+              href="/"
             >
-              Выйти из аккаунта
-            </button>
+              <p className="profile__button_type_exit-text">
+                Выйти из аккаунта
+              </p>
+            </a>
           </div>
         </form>
       </section>

@@ -7,7 +7,7 @@ const InformationSheet = () => {
         Учебный проект студента факультета Веб-разработки.
       </h1>
       <div className="information-sheet-link-bar">
-        <a className="information-sheet-link" href="/">
+        <a className="information-sheet-link" href="/project">
           О проекте
         </a>
         <a className="information-sheet-link" href="/">
