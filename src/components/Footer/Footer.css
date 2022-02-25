@@ -43,3 +43,9 @@
   text-decoration: none;
   color: #ffffff;
 }
+@media (max-width: 875px) {
+  .footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

@@ -43,3 +43,15 @@
   line-height: 50px;
   margin: 0;
 }
+@media (max-width: 875px) {
+  .portfolio {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  .portfolio__link-bar {
+    margin-bottom: 90px;
+  }
+  .portfolio__link-text {
+    font-size: 28px;
+  }
+}

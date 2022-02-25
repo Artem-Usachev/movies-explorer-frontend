@@ -81,3 +81,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (max-width: 875px) {
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 38px;
+  }
+}

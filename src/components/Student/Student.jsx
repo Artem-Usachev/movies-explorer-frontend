@@ -2,7 +2,7 @@ import React from 'react';
 import studentImg from '../../images/student.png';
 const Student = () => {
   return (
-    <section className='student'>
+    <section className='student' id='student'>
       <h2 className='student__title'>Студент</h2>
       <div className='student__content'>
         <div className='student__info'>

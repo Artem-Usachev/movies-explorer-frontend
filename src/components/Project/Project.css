@@ -36,8 +36,6 @@
   margin-top: 110px;
   display: flex;
 }
-.project__timelapse-table {
-}
 .project__timelapse-text-box {
   display: flex;
   align-items: center;
@@ -60,4 +58,19 @@
   font-size: 14px;
   line-height: 17px;
   margin: 14px 0 0;
+}
+@media (max-width: 875px) {
+  .project {
+    padding: 90px 50px;
+  }
+  .project__text-box-point {
+    width: 319px;
+  }
+  .project__text-box-point:last-child {
+    margin-left: 30px;
+  }
+  .project__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }

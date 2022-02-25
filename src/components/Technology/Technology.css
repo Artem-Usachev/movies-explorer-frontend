@@ -12,6 +12,7 @@
   border-top: 1px solid #dadada;
   display: flex;
   align-items: center;
+  margin: 0;
   flex-direction: column;
   padding-bottom: 90px;
 }
@@ -32,7 +33,7 @@
 .technology__link-bar {
   display: flex;
   list-style: none;
-  margin: 100px 0;
+  margin: 100px 0 0;
 }
 .technology__link-bar-point {
   margin-left: 10px;
@@ -58,4 +59,19 @@
 }
 .technology__link-text {
   margin: 0;
+}
+@media (max-width: 875px) {
+  .technology {
+    padding: 90px 50px 0;
+  }
+  .technology__subtitle {
+    margin: 80px 0 22px;
+  }
+  .technology__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .technology__link-bar {
+    margin-top: 83px;
+  }
 }
