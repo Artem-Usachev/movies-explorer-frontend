@@ -130,3 +130,14 @@
 .signin__input-password {
   text-decoration: dotted;
 }
+@media (max-width: 875px) {
+  .signin {
+    padding-top: 232px;
+  }
+  .signin__title {
+    margin-bottom: 29px;
+  }
+  .signin__logo {
+    margin-bottom: 51px;
+  }
+}

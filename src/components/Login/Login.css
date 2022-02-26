@@ -127,3 +127,14 @@
   margin: 0 6px 0 0;
   padding: 0;
 }
+@media (max-width: 875px) {
+  .login {
+    padding-top: 232px;
+  }
+  .login__title {
+    margin-bottom: 29px;
+  }
+  .login__logo {
+    margin-bottom: 51px;
+  }
+}
