@@ -11,3 +11,8 @@
 .disable {
   display: none;
 }
+@media (max-width: 875px) {
+  .disable {
+    display: none;
+  }
+}

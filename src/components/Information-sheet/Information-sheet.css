@@ -59,7 +59,26 @@
   .information-sheet-link-bar {
     list-style: none;
     display: flex;
-    padding: 0;
     margin-top: 314px;
+  }
+}
+@media (max-width: 700px) {
+  .information-sheet__title {
+    width: 292px;
+    margin-top: 220px;
+    font-size: 29px;
+    line-height: 37px;
+  }
+  .information-sheet-link {
+    margin: 0 3px;
+    font-size: 10px;
+    width: 82px;
+    height: 26px;
+  }
+  .information-sheet {
+    width: calc(100% - 28px);
+  }
+  .information-sheet-link-bar {
+    margin-top: 212px;
   }
 }

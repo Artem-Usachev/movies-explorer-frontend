@@ -30,6 +30,9 @@
 }
 .footer__link-text {
   margin: 0;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
 }
 .footer__link-bar-piont {
   margin-left: 10px;
@@ -47,5 +50,38 @@
   .footer {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .footer__link-bar {
+    flex-direction: column;
+  }
+  .footer__content {
+    flex-direction: column-reverse;
+    padding-top: 30px;
+    text-align: center;
+  }
+  .footer__link-bar-piont {
+    margin: 0;
+  }
+  .footer__link-text {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .footer__copyright {
+    margin-top: 18px;
+    color: #8b8b8b;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .footer__title {
+    font-size: 12px;
+    line-height: 15px;
   }
 }

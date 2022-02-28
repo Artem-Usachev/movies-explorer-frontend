@@ -20,12 +20,22 @@ const Student = () => {
             </p>
             <ul className='student__link-bar'>
               <li className='student__link-bar-point'>
-                <a className='student__link' href='/'>
+                <a
+                  className='student__link'
+                  href='https://www.facebook.com/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
                   <p className='student__link-text'>Facebook</p>
                 </a>
               </li>
               <li className='student__link-bar-point'>
-                <a className='student__link' href='/'>
+                <a
+                  className='student__link'
+                  href='https://github.com/Artem-Usachev'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
                   <p className='student__link-text'> Github</p>
                 </a>
               </li>

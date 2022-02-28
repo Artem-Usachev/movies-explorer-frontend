@@ -27,9 +27,10 @@
   display: flex;
   align-items: center;
   margin-left: 19px;
+  position: relative;
 }
 .movies__search-btn {
-  background-image: url("../../images/find.svg");
+  background-image: url('../../images/find.svg');
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -73,14 +74,14 @@
 }
 
 .movies__search-btn-invisible:checked + .movies__search-btn-visible {
-  background: url("../../images/smalltumb.svg");
+  background: url('../../images/smalltumb.svg');
   margin: 0 14px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .movies__search-btn-invisible + .movies__search-btn-visible {
-  background: url("../../images/smalltumboff.svg");
+  background: url('../../images/smalltumboff.svg');
   margin: 0 14px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -94,6 +95,7 @@
 .movies__serch-btn-box {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .movies__card {
   margin: 69px auto 0;
@@ -124,9 +126,41 @@
   .movies {
     width: calc(100% - 60px);
   }
+  .movies-saved-movies-margin {
+    margin-bottom: 169px;
+  }
   .movies__card {
     margin-top: 109px;
     column-gap: 30px;
     row-gap: 30px;
+  }
+  .movies__search-bar {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 700px) {
+  .movies {
+    width: calc(100% - 20px);
+  }
+  .movies__search-btn-label {
+    position: absolute;
+    bottom: -73px;
+    left: -170px;
+    padding: 0;
+    border: none;
+    margin: 0;
+  }
+  .movies__search-loop-img {
+    display: none;
+  }
+  .movies__search-input {
+    width: 100%;
+  }
+  .movies__search-btn {
+    margin-right: 19px;
+  }
+  .movies__card {
+    padding-top: 50px;
+    row-gap: 34px;
   }
 }

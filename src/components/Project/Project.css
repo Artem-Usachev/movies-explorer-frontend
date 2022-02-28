@@ -74,3 +74,47 @@
     line-height: 18px;
   }
 }
+@media (max-width: 700px) {
+  .project {
+    padding: 70px 16px;
+  }
+  .project__text-box {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .project__text-box-point {
+    width: 100%;
+  }
+  .project__text-box-point:last-child {
+    margin-left: 0;
+  }
+  .project__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .project__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .project__timelapse {
+    margin-top: 60px;
+  }
+  .project__timelapse-text-box-left {
+    width: 31.25vw;
+    height: 35px;
+  }
+  .project__timelapse-text-box-right {
+    width: 56.25vw;
+    height: 35px;
+  }
+  .project__timelaps-text-en {
+    font-size: 11px;
+    line-height: 13px;
+    margin: 10px 0 0;
+  }
+  .project__timelaps-text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
