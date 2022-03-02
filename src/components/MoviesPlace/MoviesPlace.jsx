@@ -13,7 +13,7 @@ const MoviesPlace = ({ savedMoviesMargin, cards, btnCondishion }) => {
               alt='лупа'
               src={`${loopImg}`}
             />
-            <input className='movies__search-input' placeholder='Фильм'></input>
+            <input className='movies__search-input' placeholder='Фильм' required></input>
           </div>
           <div className='movies__serch-btn-box'>
             <button className='movies__search-btn'></button>

@@ -13,15 +13,19 @@
   justify-content: space-between;
   padding: 0;
   height: 72px;
+  margin-top: 70px;
 }
 .movies__search-input {
   background-color: #2f2f2f;
   border: none;
+  color: #8B8B8B;
 }
 .movies__search-input:focus {
   border: none;
   outline: none;
   color: #ffff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px white;
 }
 .movies__search-input-bar {
   display: flex;
@@ -74,14 +78,14 @@
 }
 
 .movies__search-btn-invisible:checked + .movies__search-btn-visible {
-  background: url('../../images/smalltumb.svg');
+  background: url('../../images/smalltumboff.svg');
   margin: 0 14px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .movies__search-btn-invisible + .movies__search-btn-visible {
-  background: url('../../images/smalltumboff.svg');
+  background: url('../../images/smalltumb.svg');
   margin: 0 14px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -162,5 +166,9 @@
   .movies__card {
     padding-top: 50px;
     row-gap: 34px;
+    grid-template-columns: 93.75vw;
+    width: 93.75vw;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

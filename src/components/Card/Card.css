@@ -59,4 +59,8 @@
   .card__haert-btn-delete {
     opacity: 1;
   }
+  .card {
+    max-width: 93.75vw;
+    
+  }
 }
