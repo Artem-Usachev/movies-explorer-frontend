@@ -2,7 +2,7 @@
 
 diploma-artem-usachev.nomoredomains.work
 
-# ссфлка на макет
+# ссылка на макет
 
 https://www.figma.com/file/7HgfmtqpwvNowuS1EaTo7d/Diploma-(Copy)?node-id=891%3A3857
 
