@@ -8,4 +8,4 @@ https://www.figma.com/file/7HgfmtqpwvNowuS1EaTo7d/Diploma-(Copy)?node-id=891%3A3
 
 # публичный ip
 
-51.250.26.90
+84.201.140.215
