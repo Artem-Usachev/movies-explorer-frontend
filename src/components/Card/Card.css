@@ -39,19 +39,39 @@
 }
 .card__img {
   width: 100%;
+  height: 151px;
+  transition: 0.5s ease all;
+}
+.card__img:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 .card__heart-btn-active {
   background-image: url(../../images/heart.svg);
 }
 .card__haert-btn-delete {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: #202020;
   background-image: url(../../images/delete.svg);
-  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: 1s ease all;
 }
-.card__marker:hover .card__haert-btn-delete {
-  opacity: 1;
+.card__haert-btn-delete:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+@media (max-width: 875px) {
+  .card__img {
+    height: 190px;
+  }
 }
 @media (max-width: 700px) {
+  .card__img {
+    height: 168px;
+  }
   .card__title {
     font-size: 12px;
     line-height: 15px;
@@ -61,6 +81,5 @@
   }
   .card {
     max-width: 93.75vw;
-    
   }
 }
