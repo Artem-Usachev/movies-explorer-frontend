@@ -21,7 +21,6 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
   const [isServerError, setIsServerError] = useState(false)
   const [isInputDisabled, setIsInputDisabled] = useState(false)
   const [isBtnVisible, setIsBtnVisible] = useState(false)
-  const [isPreviousSearch, setIsPreviousSearch] = useState(true)
 
   const onShortFilmsCheckbox = () => setIsShort(!isShort)
 
@@ -31,7 +30,6 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
   const onSubmitForm = (evt) => {
     evt.preventDefault()
     if (isValid) {
-      setIsPreviousSearch(false)
       setIsSearch(false)
       if (!isSaved) {
         setIsServerError(false)
@@ -150,8 +148,9 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
       setFilterFilmArray(savedMovies)
       const shortUpdateFilms = savedMovies.filter((movie) => movie.duration <= 40)
       setShortFilmsArray(shortUpdateFilms)
+      if (isShort) setMoviesStorage(shortUpdateFilms)
     }
-  }, [savedMovies])
+  }, [savedMovies, isShort])
 
   useEffect(() => {
     if (filterFilmArray.length > 0) {
