@@ -3,12 +3,12 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import MoviesPlace from '../MoviesPlace/MoviesPlace'
 import Menu from '../Menu/Menu'
-const SaveMovies = ({ cardCount, handleDeleteFilm, savedMovies }) => {
+const SaveMovies = ({ cardCount, handleDeleteFilm, savedMovies, isAuth }) => {
   return (
     <>
-      <Header homePageBtnCondition={'disable'} />
+      <Header isAuth={isAuth} />
       <Menu activeLinkSavedMovies={'menu__active-link'} />
-      <MoviesPlace isSaved cardCount={cardCount} handleDeleteFilm={handleDeleteFilm} savedMovies={savedMovies} />
+      <MoviesPlace isSaved={true} cardCount={cardCount} handleDeleteFilm={handleDeleteFilm} savedMovies={savedMovies} />
       <Footer />
     </>
   )

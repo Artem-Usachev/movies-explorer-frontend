@@ -28,6 +28,8 @@ const Signin = ({ onRegisterSumbit }) => {
                 value={values.name}
                 type="text"
                 required
+                minLength="2"
+                maxLength="30"
               ></input>
             </li>
             <li className="signin__form-input-bar-point">
@@ -39,6 +41,7 @@ const Signin = ({ onRegisterSumbit }) => {
                 value={values.email}
                 required
                 type="email"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
               ></input>
             </li>
             <li className="signin__form-input-bar-point">

@@ -46,6 +46,8 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
             const shortFilms = filteredFilms.filter((movie) => movie.duration <= 40)
             localStorage.setItem('moviesLongFilms', JSON.stringify(filteredFilms))
             localStorage.setItem('moviesShortFilms', JSON.stringify(shortFilms))
+            localStorage.setItem('searchTextFilms', values.search)
+            localStorage.setItem('searchCheckbox', isShort)
             setFilterFilmArray(filteredFilms)
             setShortFilmsArray(shortFilms)
             if (isShort) {
@@ -83,8 +85,6 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
         setIsPreloaderVisible(true)
         const filteredSavedFilms = filterItems(savedMovies, values.search)
         const shortSavedFilms = filteredSavedFilms.filter((movie) => movie.duration <= 40)
-        localStorage.setItem('moviesSavedShortFilms', JSON.stringify(shortSavedFilms))
-        localStorage.setItem('moviesSavedLongFilms', JSON.stringify(filteredSavedFilms))
         setFilterFilmArray(filteredSavedFilms)
         setShortFilmsArray(shortSavedFilms)
         if (isShort) {
@@ -114,16 +114,24 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
   useEffect(() => {
     const searchMovies = JSON.parse(localStorage.getItem('moviesLongFilms'))
     const searchShortMovies = JSON.parse(localStorage.getItem('moviesShortFilms'))
-    const savedSearchMovies = JSON.parse(localStorage.getItem('moviesSavedLongFilms'))
-    const savedSearchShortMovies = JSON.parse(localStorage.getItem('moviesSavedShortFilms'))
+    const savedSearchMovies = JSON.parse(localStorage.getItem('films'))
+
     if (isSaved) {
       if (savedSearchMovies?.length > 0) {
+        const savedSearchShortMovies = savedSearchMovies.filter((movie) => movie.duration <= 40)
         setMoviesStorage(savedSearchMovies)
         setFilterFilmArray(savedSearchMovies)
         setShortFilmsArray(savedSearchShortMovies)
         setIsSearch(true)
       }
     } else if (searchMovies?.length > 0) {
+      const searchMovies = JSON.parse(localStorage.getItem('moviesLongFilms'))
+      const savedSearchTextMovies = localStorage.getItem('searchTextFilms')
+      const savedSearchCheckbox = JSON.parse(localStorage.getItem('searchCheckbox'))
+      values.search = savedSearchTextMovies
+      if (savedSearchCheckbox) {
+        setIsShort(savedSearchCheckbox)
+      }
       setMoviesStorage(searchMovies)
       setFilterFilmArray(searchMovies)
       setShortFilmsArray(searchShortMovies)
@@ -137,8 +145,11 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
   }, [])
 
   useEffect(() => {
-    if (isSaved && !isPreviousSearch) {
+    if (isSaved) {
       setMoviesStorage(savedMovies)
+      setFilterFilmArray(savedMovies)
+      const shortUpdateFilms = savedMovies.filter((movie) => movie.duration <= 40)
+      setShortFilmsArray(shortUpdateFilms)
     }
   }, [savedMovies])
 
@@ -149,10 +160,12 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
           setIsNotFound(false)
           setIsSearch(true)
         }
+
         if (isShort && shortFilmsArray.length === 0) {
           setIsNotFound(true)
           setIsSearch(false)
         }
+
         if (isShort) {
           setMoviesStorage(shortFilmsArray)
           if (shortFilmsArray.length <= cardCount) {
@@ -209,6 +222,7 @@ const MoviesPlace = ({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, sav
                 type="checkbox"
                 className="movies__search-btn-invisible"
                 name="short-films"
+                checked={isShort}
                 onChange={onShortFilmsCheckbox}
               />
               <span className="movies__search-btn-visible" />

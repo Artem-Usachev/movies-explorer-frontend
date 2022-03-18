@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import useFormValidation from '../../utils/react-hooks/Validator'
 import Header from '../Header/Header'
 import { CurrentUserContext } from '../../contexts/CurrentUserContext'
-const Profile = ({ profileNetworkError, handleEditProfile, handleExitAccount, isSuccessSubmit }) => {
+const Profile = ({ profileNetworkError, handleEditProfile, handleExitAccount, isSuccessSubmit, isAuth }) => {
   const [isUpdate, setIsUpdate] = useState(false)
   const [isInputDisabled, setIsInputDisabled] = useState(false)
   const currentUser = useContext(CurrentUserContext)
@@ -37,7 +37,7 @@ const Profile = ({ profileNetworkError, handleEditProfile, handleExitAccount, is
 
   return (
     <>
-      <Header homePageBtnCondition={'disable'} />
+      <Header isAuth={isAuth} />
       <section className="profile">
         <h1 className="profile__title">Привет, {`${currentUser.name}`}</h1>
         <form className="profile__form" onSubmit={onFormSumbit}>
@@ -54,6 +54,8 @@ const Profile = ({ profileNetworkError, handleEditProfile, handleExitAccount, is
                 values={nameRef.current.value}
                 disabled={isInputDisabled}
                 defaultValue={currentUser.name}
+                minLength="2"
+                maxLength="30"
               ></input>
             </li>
             <li className="profile__input-bar-point">
@@ -68,6 +70,7 @@ const Profile = ({ profileNetworkError, handleEditProfile, handleExitAccount, is
                 defaultValue={currentUser.email}
                 values={emailRef.current.value}
                 placeholder="email"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
               ></input>
             </li>
           </ul>

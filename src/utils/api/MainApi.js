@@ -4,7 +4,7 @@ function checkResponse(res) {
   if (res.ok) {
     return res.json()
   }
-  return Promise.reject(`Ошибка: ${res.status}`)
+  return Promise.reject(`Ошибка: ${res.status}`, alert(`Ошибка: ${res.status}`))
 }
 
 const login = (email, password) =>
@@ -66,7 +66,7 @@ const saveMovies = (movie) =>
     }),
   }).then(checkResponse)
 
-const getMovies = () =>
+const getMiniApiMovies = () =>
   fetch(`${baseUrl}/movies`, {
     method: 'GET',
     headers: {
@@ -84,4 +84,4 @@ const register = (name, email, password) =>
     body: JSON.stringify({ name, email, password }),
   }).then(checkResponse)
 
-export { register, login, getUserInformation, editProfile, saveMovies, getMovies, deleteSavedMovies }
+export { register, login, getUserInformation, editProfile, saveMovies, getMiniApiMovies, deleteSavedMovies }

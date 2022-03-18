@@ -7,7 +7,7 @@ import {
   editProfile,
   saveMovies,
   deleteSavedMovies,
-  getMovies,
+  getMiniApiMovies,
 } from '../../utils/api/MainApi'
 
 import Main from '../Main/Main'
@@ -27,7 +27,7 @@ const App = () => {
   const history = useHistory()
   const [currentUser, setCurrentUser] = useState({})
   const [isAuth, setIsAuth] = useState(false)
-  const [savedMovies, setSavedMovies] = useState('')
+  const [savedMovies, setSavedMovies] = useState([])
   const [isSuccessSubmit, setIsSuccessSubmit] = useState(false)
   const [cardCount, setCardCount] = useState(window.innerWidth > 800 ? 10 : 8)
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -73,7 +73,7 @@ const App = () => {
   const handleSaveFilm = ({ movie }) => {
     saveMovies(movie)
       .then(() => {
-        getMovies()
+        getMiniApiMovies()
           .then((res) => {
             const serverFilms = res
             const userSavedFilms = filterUserSavedFilms(serverFilms, currentUser._id)
@@ -88,7 +88,7 @@ const App = () => {
   const handleDeleteFilm = ({ movieId }) => {
     deleteSavedMovies(movieId)
       .then(() => {
-        getMovies()
+        getMiniApiMovies()
           .then((res) => {
             const serverFilms = res
             const userSavedFilms = filterUserSavedFilms(serverFilms, currentUser._id)
@@ -110,7 +110,7 @@ const App = () => {
               setCurrentUser(userInfo.user)
               setIsAuth(true)
               const curUserID = userInfo.user._id
-              getMovies()
+              getMiniApiMovies()
                 .then((res) => {
                   const serverFilms = res
                   const userSavedFilms = filterUserSavedFilms(serverFilms, curUserID)
@@ -118,6 +118,7 @@ const App = () => {
                   localStorage.setItem('films', JSON.stringify(userSavedFilms))
                 })
                 .catch((err) => console.log(err))
+
               history.push('/movies')
             }
           })
@@ -192,12 +193,13 @@ const App = () => {
         <div className="page">
           <BrowserRouter>
             <Switch>
-              <UnProtectedRoute exact path="/" component={Main} />
+              <Route exact path="/">
+                <Main isAuth={isAuth} />
+              </Route>
               <UnProtectedRoute
                 exact
                 path="/signin"
                 component={Login}
-                isAuth={isAuth}
                 handleLogin={handleLogin}
                 loginNetworkError={loginNetworkError}
               />
@@ -231,12 +233,16 @@ const App = () => {
                 exact
                 path="/profile"
                 component={Profile}
+                isAuth={isAuth}
                 profileNetworkError={profileNetworkError}
                 handleEditProfile={handleEditProfile}
                 handleExitAccount={handleExitAccount}
                 isSuccessSubmit={isSuccessSubmit}
               />
-              <Route path="" component={Page404} />
+
+              <Route path="">
+                <Page404 />
+              </Route>
             </Switch>
           </BrowserRouter>
         </div>

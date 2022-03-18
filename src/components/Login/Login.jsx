@@ -27,6 +27,7 @@ const Login = ({ handleLogin, loginNetworkError }) => {
                 value={values.email}
                 className={errors.email ? 'login__input-error login__input' : ' login__input'}
                 onChange={handleChange}
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                 required
               ></input>
             </li>
