@@ -18,7 +18,7 @@
 .movies__search-input {
   background-color: #2f2f2f;
   border: none;
-  color: #8B8B8B;
+  color: #8b8b8b;
 }
 .movies__search-input:focus {
   border: none;
@@ -78,14 +78,14 @@
 }
 
 .movies__search-btn-invisible:checked + .movies__search-btn-visible {
-  background: url('../../images/smalltumboff.svg');
+  background: url('../../images/smalltumb.svg');
   margin: 0 14px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .movies__search-btn-invisible + .movies__search-btn-visible {
-  background: url('../../images/smalltumb.svg');
+  background: url('../../images/smalltumboff.svg');
   margin: 0 14px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,8 +107,9 @@
   column-gap: 20px;
   row-gap: 38px;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  padding-top: 80px;
+  padding: 80px 0 0;
   border-top: 1px solid #424242;
+  list-style: none;
 }
 
 .movies__button {
@@ -171,4 +172,27 @@
     margin-right: auto;
     margin-left: auto;
   }
+}
+.movies__search-error-text {
+  padding: 0;
+  margin: 120px auto;
+  text-align: center;
+  line-height: 18px;
+  font-size: 16px;
+  max-width: 400px;
+  width: 31.25vw;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+.btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  background-color: red;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.3;
 }
