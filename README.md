@@ -1,4 +1,4 @@
-# адресс приложения
+# адрес приложения
 
 diploma-artem-usachev.nomoredomains.work
 
